@@ -10,15 +10,16 @@ Para executar este projeto, você precisará das seguintes ferramentas e versõe
 
 - **Python**: 3.6 ou superior. [Python](https://www.python.org/downloads/)
 - **Django**: 3.2 ou superior. [Django](https://www.djangoproject.com/)
+- **Pillow**: _python -m pip install Pillow_
 - **SQLite**: (incluso com Python, não precisa de instalação separada)
 - **GitHub**: Para controle de versão e colaboração. [GitHub](https://github.com/)
 - **Jira**: Para gerenciamento de projetos e tarefas. [Jira](https://www.atlassian.com/software/jira)
 
 ## Links 🔗
-
 - https://cesar-team-cl0vsbag.atlassian.net/jira/software/projects/TEC/boards/1/backlog?assignee=unassigned
 - https://www.figma.com/design/wy3al55ytbCJGAoTPjeKyI/Untitled?node-id=0-1&node-type=canvas&t=1Z0sYzX13y6Dh0xm-0
-- https://youtu.be/qymdWopGE-o (Screencast)
+- https://youtu.be/qymdWopGE-o (Screencast) Entrega 1
+- https://youtu.be/Gpn5T3saxH8 (Screencast) Entrega 2
 
 ## Entregas 📦
 
@@ -31,7 +32,6 @@ Para executar este projeto, você precisará das seguintes ferramentas e versõe
 **Protótipos Lo-Fi**
 
 #### Tela de Login
-
 ![Login](img/login.png)
 
 #### Front Page
@@ -50,13 +50,19 @@ Para executar este projeto, você precisará das seguintes ferramentas e versõe
 
 ![Chat](img/chat.png)
 
-### Screencast
 
-![Screencast](img/screencast.mp4)
+### Entrega 2
+
+### Sprint 1
+
+![Sprint](img/sprint.png)
+
 
 ## Desenvolvido por:
 
 - [Caio Augusto](https://github.com/CaioAugustoMachadoDeMelo) - camm@cesar.school
 - [Davi Santiago](https://github.com/Davicas01) - dscpr@cesar.school
 - [Felipe Gonçalves Moxotó](https://github.com/Moxoto2k) - fgm@cesar.school
-- [Kaike Campos](https://github.com/Kaik-e) - kcma@cesar.school
+- [Kaike Campos](https://github.com/Kaik-e) - kcma@cesar.school 
+
+
