@@ -19,7 +19,7 @@ Para executar este projeto, você precisará das seguintes ferramentas e versõe
 - https://cesar-team-cl0vsbag.atlassian.net/jira/software/projects/TEC/boards/1/backlog?assignee=unassigned
 - https://www.figma.com/design/wy3al55ytbCJGAoTPjeKyI/Untitled?node-id=0-1&node-type=canvas&t=1Z0sYzX13y6Dh0xm-0
 - https://youtu.be/qymdWopGE-o (Screencast) Entrega 1
-- https://youtu.be/Gpn5T3saxH8 (Screencast) Entrega 2
+- https://youtu.be/Gpn5T3saxH8 (Screencast) Entrega 3
 
 ## Entregas 📦
 
@@ -51,7 +51,7 @@ Para executar este projeto, você precisará das seguintes ferramentas e versõe
 ![Chat](img/chat.png)
 
 
-### Entrega 2
+### Entrega 3
 
 ### Sprint 1
 
