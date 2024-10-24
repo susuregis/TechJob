@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,11 @@
     <link rel="stylesheet" href="{% static 'css/tailwind.css' %}">
     <title>Projetos</title>
 </head>
+
 <body>
     {% include 'navbar.html' %}
     <div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-900 py-6 sm:py-12">
-        <div class="inline-flex"> 
+        <div class="inline-flex">
             <div class="font-bold text-4xl text-white mx-6 -my-1">Projetos</div>
             <div class="bg-gray-700 h-9 w-60 rounded-xl inline-flex hover:border transition-all">
                 <div class="m-2 h-5 w-5 rounded-full bg-slate-400 opacity-35"></div>
@@ -19,24 +21,39 @@
             <div class="bg-gray-900 border borde h-9 rounded-xl inline-flex hover:border transition-all mx-6">
                 <div class="text-white text-center m-1">Filter</div>
             </div>
-            <a href="{% url 'adicionar_projeto' %}" class="bg-green-500 text-white h-9 rounded-xl inline-flex items-center px-4 hover:bg-green-400 transition-all mx-2">
+            <a href="{% url 'adicionar_projeto' %}"
+                class="bg-green-500 text-white h-9 rounded-xl inline-flex items-center px-4 hover:bg-green-400 transition-all mx-2">
                 Adicionar Projeto
             </a>
         </div>
         <div class="grid gap-6 p-6 sm:grid-cols-2 md:grid-cols-4">
-        {% for projeto in projetos %}
+            {% for projeto in projetos %}
             <div class="rounded-xl bg-gray-800">
                 <div class="m-2 h-44 rounded-xl bg-gray-600"></div>
                 <div class="m-2 font-bold text-white">{{ projeto.titulo }}</div>
-                <div class="inline-flex">
-                    <div class="m-2 my-0.5 h-5 w-5 rounded-full bg-slate-400"></div>
-                    <div class="text-gray-400 transition-all hover:scale-105 hover:cursor-pointer hover:text-white">{{ projeto.usuario.username }}</div>
+                <div class="inline-flex items-center">
+                    <div
+                        class="m-2 h-10 w-10 rounded-full bg-slate-400 overflow-hidden border-2 border-gray-500 shadow-lg">
+                        {% if user.profile_picture %}
+                        <img src="{{ user.profile_picture.url }}" alt="Foto de perfil" class="profile-pic" />
+                        {% else %}
+                        <img src="{% static 'path/to/default/image.jpg' %}" alt="Foto de perfil padrÃ£o"
+                            class="profile-pic" />
+                        {% endif %}
+                    </div>
+                    <div
+                        class="text-gray-400 transition-all hover:scale-105 hover:cursor-pointer hover:text-white ml-2">
+                        {{ projeto.usuario.username }}</div>
                 </div>
-                <div class="m-2 h-8 rounded-xl bg-gray-700 transition-all active:scale-95 hover:cursor-pointer hover:bg-green-400">
-                    <a href="{% url 'projeto_detalhes' projeto.id %}" class="p-1 text-center font-semibold text-white transition-all hover:font-bold">Ver mais</a>
-                </div>                              
+                <div class="m-2 h-8 rounded-xl bg-gray-700 transition-all active:scale-95 hover:bg-green-400">
+                    <a href="{% url 'projeto_detalhes' projeto.id %}"
+                        class="flex justify-center items-center h-full font-semibold text-white transition-all hover:font-bold">Ver
+                        mais</a>
+                </div>
             </div>
-        {% endfor %}
-    </div>
+            {% endfor %}
+        </div>
 </body>
+
 </html>
+ 

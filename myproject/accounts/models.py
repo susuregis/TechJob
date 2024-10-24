@@ -10,7 +10,7 @@ class CustomUser(AbstractUser):
     cnpj = models.CharField(max_length=14, blank=True, null=True)
     company_name = models.CharField(max_length=255, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
-    profile_picture = models.ImageField(upload_to='profile_pictures/', blank=True, null=True)
+    profile_picture = models.ImageField(upload_to='profile_pics/', blank=True, null=True, default='path/to/default/image.jpg')
 
     def save(self, *args, **kwargs):
         if self.is_freelancer:
