@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'edit_skills.css' %}">
+    <title>Editar Skills</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="edit-skills-container">
+        <h2>Editar Skills</h2>
+        <form method="post" class="edit-skills-form">
+            {% csrf_token %}
+            <input type="text" name="skill_name" placeholder="Adicionar nova skill" required>
+            <button type="submit" class="edit-skills-btn">Adicionar</button>
+        </form>
+
+        <h3>Suas Skills</h3>
+        <ul>
+            {% for skill in user_skills %}
+                <li>{{ skill.name }}</li>
+            {% empty %}
+                <li>Você ainda não possui skills.</li>
+            {% endfor %}
+        </ul>
+
+        <button class="back-btn">
+            <a href="{% url 'perfil' %}" style="color: #ffffff; text-decoration: none;">Voltar para o Perfil</a>
+        </button>
+    </div>
+</body>
+</html>

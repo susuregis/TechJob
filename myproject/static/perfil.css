@@ -1,0 +1,196 @@
+body {
+  background-color: rgb(31, 41, 55);
+}
+
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 7px;
+  padding: 10px;
+  background-color: rgb(55, 65, 81);
+  border: none;
+  color: rgba(248, 248, 248, 0.9);
+  font-family: Arial, sans-serif;
+  transition: opacity 0.12s;
+}
+.back-btn:hover {
+  opacity: 0.8;
+}
+.back-btn:active {
+  opacity: 0.6;
+}
+
+.srch-bar {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  color: #ffffff;
+}
+
+.srch-bar input {
+  cursor: pointer;
+  width: 300px;
+  padding: 10px;
+  background-color: rgb(75, 85, 99);
+  color: #ffffff;
+  border-radius: 7px;
+  border: none;
+  font-family: Arial, sans-serif;
+  transition: box-shadow 0.12s, background-color 0.12s;
+}
+
+.srch-bar input::placeholder {
+  color: rgba(248, 248, 248, 0.7);
+}
+
+.srch-bar input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.srch-bar input:hover {
+  background-color: rgb(129, 140, 160);
+}
+
+.prfl-icon {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(75, 85, 99);
+  border-radius: 50px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.prfl-container {
+  margin-top: 70px; /* Ajuste para evitar sobreposição */
+  width: 500px; /* Aumenta a largura do container */
+  background-color: rgb(15, 23, 42);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 100px auto;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.prfl-tlt {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(55, 65, 81);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  align-items: flex-start; /* Alinha os itens à esquerda */
+}
+
+.prfl-pic {
+  width: 120px;
+  height: 120px;
+  background-color: rgb(129, 140, 160);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prfl-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px; /* Para manter a borda arredondada */
+}
+
+.prfl-info {
+  text-align: left; /* Alinha o texto à esquerda */
+  margin-left: 10px; /* Adiciona margem à esquerda para mover o texto mais para a esquerda */
+}
+
+.prfl-info h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #f8f8f8;
+}
+
+.prfl-info p {
+  margin: 5px 0 15px;
+  color: rgba(248, 248, 248, 0.7);
+}
+
+.prfl-btn {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os botões se movam para a próxima linha, se necessário */
+  gap: 10px;
+  justify-content: center; /* Centraliza os botões */
+}
+
+.prfl-btn .btn {
+  padding: 10px 20px;
+  background-color: rgb(75, 85, 99);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.12s, opacity 0.12s;
+  flex: 1 1 150px; /* Ajusta a flexibilidade dos botões, garantindo um tamanho mínimo */
+  text-decoration: none; /* Remove o sublinhado */
+  font-family: Arial, sans-serif; /* Garante que a fonte seja a mesma */
+  text-align: center; /* Centraliza o texto dentro do botão */
+}
+
+.prfl-info h2,
+.prfl-info p {
+  font-family: Arial, sans-serif; /* Garante que a fonte seja a mesma */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.btn:hover {
+  background-color: rgb(66, 180, 75);
+}
+
+.btn:active {
+  opacity: 0.6;
+}
+
+.prfl-skills {
+  background-color: rgb(55, 65, 81);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+  color: rgba(248, 248, 248, 0.9);
+}
+
+.prfl-skills h3 {
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  color: #f8f8f8;
+}
+
+.skills-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.skill-item {
+  background-color: rgb(75, 85, 99);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* perfil.css ou outro arquivo CSS */
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}

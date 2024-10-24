@@ -1,0 +1,89 @@
+body {
+    background-color: rgb(31, 41, 55);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #f8f8f8;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 28px;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(15, 23, 42);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 18px;
+}
+
+input[type="text"],
+textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    background-color: rgb(55, 65, 81);
+    color: #f8f8f8;
+    font-size: 16px;
+    resize: vertical; 
+}
+
+input[type="text"]::placeholder,
+textarea::placeholder {
+    color: rgba(248, 248, 248, 0.7);
+}
+
+button[type="submit"],
+.btn {
+    padding: 10px;
+    background-color: rgb(66, 180, 75);
+    border: none;
+    border-radius: 7px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.12s, opacity 0.12s;
+    display: block; 
+    text-align: center; 
+}
+
+button[type="submit"]:hover,
+.btn:hover {
+    background-color: rgb(55, 155, 65);
+}
+
+button[type="submit"]:active,
+.btn:active {
+    opacity: 0.6;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center; 
+    margin-top: 20px; 
+}
+
+.btn {
+    text-decoration: none; 
+    color: white; 
+    background-color: rgb(66, 180, 75); 
+    padding: 10px 20px; 
+    border-radius: 7px; 
+}
+
+.btn .link{
+    text-decoration: none;
+    color: white; 
+
+}

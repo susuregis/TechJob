@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'register.css' %}">
+    <title>Registro</title>
+</head>
+<body>
+    <div class="register-container">
+        <h2>Registrar</h2>
+        <form class="register-form" method="POST" action="{% url 'register' %}">
+            {% csrf_token %}
+            <label for="user_type">Sou um:</label>
+            <select name="user_type" id="user_type" onchange="toggleFields()">
+                <option value="freelancer">Freelancer</option>
+                <option value="company">Empresa</option>
+            </select>
+            <label for="username">Usuário:</label>
+            <input type="text" name="username" id="username" placeholder="Digite seu usuário" required>
+            <label for="password">Senha:</label>
+            <input type="password" name="password" id="password" placeholder="Digite sua senha" required>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+            <div id="freelancer_fields">
+                <label for="cpf">CPF:</label>
+                <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF">
+            </div>
+            <div id="company_fields" style="display:none;">
+                <label for="company_name">Nome da Empresa:</label>
+                <input type="text" name="company_name" id="company_name" placeholder="Digite o nome da empresa">
+                <label for="cnpj">CNPJ:</label>
+                <input type="text" name="cnpj" id="cnpj" placeholder="Digite seu CNPJ">
+            </div>
+            <button type="submit" class="register-btn">Registrar</button>
+        </form>
+        <p>Já tem uma conta? <a href="{% url 'login' %}">Login</a></p>
+    </div>
+
+    <script>
+        function toggleFields() {
+            var userType = document.getElementById('user_type').value;
+            if (userType == 'freelancer') {
+                document.getElementById('freelancer_fields').style.display = 'block';
+                document.getElementById('company_fields').style.display = 'none';
+            } else {
+                document.getElementById('freelancer_fields').style.display = 'none';
+                document.getElementById('company_fields').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio.css' %}">
+    <title>Meu Portfólio</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="portfolio-content">
+        <h1>Meu Portfólio</h1>
+        <a href="{% url 'add_portfolio' %}" class="btn">Adicionar Portfólio</a>
+        <div class="portfolio-container">
+            {% if portfolios %}
+                <ul>
+                    {% for portfolio in portfolios %}
+                        <li class="portfolio-item">
+                            <h2>{{ portfolio.title }}</h2>
+                            <p>{{ portfolio.description }}</p>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="no-portfolios">Você ainda não adicionou nenhum portfólio.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

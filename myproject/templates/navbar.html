@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Minimalista</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'navbar.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="{% url 'home' %}" class="nav-link">Home</a>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Pesquisar..." class="search-input" />
+            <button class="search-button">🔍</button>
+        </div>
+        <div class="profile-icon">
+            <a href="{% url 'perfil' %}">
+                {% if user.profile_picture %}
+                    <img src="{{ user.profile_picture.url }}" alt="Foto de perfil" class="profile-pic" />
+                {% else %}
+                    <img src="{% static 'default_profile.png' %}" alt="Foto de perfil padrão" class="profile-pic" />
+                {% endif %}
+            </a>
+        </div>
+    </nav>
+</body>
+</html>

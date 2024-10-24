@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'send_message.css' %}">
+    <title>Enviar Mensagem</title>
+</head>
+<body>
+    <div class="message-container">
+        <h2>Enviar Mensagem para {{ recipient.username }}</h2>
+        <form method="post" class="message-form">
+            {% csrf_token %}
+            <input type="hidden" name="recipient_id" value="{{ recipient.id }}">
+            <textarea name="message_content" placeholder="Digite sua mensagem aqui..." required></textarea>
+            <button type="submit" class="message-btn">Enviar</button>
+        </form>
+        <button class="back-btn">
+            <a href="{% url 'perfil' %}" style="color: #ffffff; text-decoration: none;">Voltar ao Perfil</a>
+        </button>
+    </div>
+</body>
+</html>

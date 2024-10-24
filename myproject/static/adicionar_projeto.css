@@ -1,0 +1,90 @@
+body {
+    background-color: rgb(31, 41, 55);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+  
+.container {
+    background-color: rgb(15, 23, 42);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+    color: #f8f8f8;
+}
+  
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #f8f8f8;
+}
+  
+form {
+    display: flex;
+    flex-direction: column;
+}
+  
+input[type="text"],
+textarea,
+input[type="file"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 7px;
+    background-color: rgb(55, 65, 81);
+    color: #f8f8f8;
+    font-size: 16px;
+}
+  
+input[type="text"]::placeholder,
+textarea::placeholder {
+    color: rgba(248, 248, 248, 0.7);
+}
+  
+button {
+    padding: 10px;
+    background-color: rgb(66, 180, 75);
+    border: none;
+    border-radius: 7px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.12s, opacity 0.12s;
+}
+  
+button:hover {
+    background-color: rgb(55, 155, 65);
+}
+  
+a {
+    display: inline-block;
+    margin-top: 10px;
+    color: rgb(66, 180, 75);
+    text-decoration: none;
+    transition: color 0.12s;
+}
+  
+a:hover {
+    color: rgb(55, 155, 65);
+}
+
+input[type="file"] {
+    padding: 10px;
+    background-color: rgb(55, 65, 81);
+    border: none;
+    border-radius: 7px;
+    color: #f8f8f8;
+    font-size: 16px;
+}
+
+label {
+    font-weight: bold;
+    color: #f8f8f8;
+    margin-bottom: 5px;
+    text-align: left;
+}

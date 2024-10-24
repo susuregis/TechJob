@@ -1,0 +1,34 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'login.css' %}">
+    <title>Login</title>
+</head>
+<body>
+    <div class="lgn-container">
+        <h2>Login</h2>
+        <form class="lgn-form" method="POST" action="{% url 'login' %}">
+            {% csrf_token %}
+            <label for="username">Usuário</label>
+            <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
+            
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+            
+            <button type="submit" class="lgn-btn">Entrar</button>
+        </form>
+        <p>Não tem uma conta? <a href="{% url 'register' %}">Registrar</a></p> 
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</body>
+</html>

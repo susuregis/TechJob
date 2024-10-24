@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'adicionar_projeto.css' %}">
+    <title>Adicionar Projeto</title>
+</head>
+<body>
+    <div class="container mx-auto p-4">
+        <h2 class="text-xl font-bold">Adicionar Novo Projeto</h2>
+        <form method="post">
+            {% csrf_token %}
+            <label for="titulo">Título:</label>
+            <input type="text" name="titulo" id="titulo" required>
+            
+            <label for="descricao">Descrição:</label>
+            <textarea name="descricao" id="descricao" required></textarea>
+            
+            <button type="submit">Adicionar Projeto</button>
+        </form>                  
+        <a href="{% url 'home' %}" class="text-blue-500 mt-4 inline-block">Voltar para a Home</a>
+    </div>
+</body>
+</html>

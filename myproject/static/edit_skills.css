@@ -1,0 +1,97 @@
+body {
+    background-color: rgb(31, 41, 55);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    margin: 0;
+}
+
+.edit-skills-container {
+    background-color: rgb(15, 23, 42);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    color: #f8f8f8;
+}
+
+.edit-skills-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #f8f8f8;
+}
+
+.edit-skills-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-skills-form input[type="text"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 7px;
+    background-color: rgb(55, 65, 81);
+    color: #f8f8f8;
+    font-size: 16px;
+}
+
+.edit-skills-form input[type="text"]::placeholder {
+    color: rgba(248, 248, 248, 0.7);
+}
+
+.edit-skills-btn {
+    padding: 10px;
+    background-color: rgb(66, 180, 75);
+    border: none;
+    border-radius: 7px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.12s, opacity 0.12s;
+}
+
+.edit-skills-btn:hover {
+    background-color: rgb(55, 155, 65);
+}
+
+.edit-skills-btn:active {
+    opacity: 0.6;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: rgb(15, 23, 42);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(66, 180, 75);
+    color: #f8f8f8;
+}
+
+.back-btn {
+    padding: 10px 15px;
+    margin-top: 20px;
+    background-color: rgb(66, 180, 75);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 7px;
+    transition: background-color 0.12s, opacity 0.12s;
+    border: none;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background-color: rgb(55, 155, 65);
+}
+
+.back-btn:active {
+    opacity: 0.6;
+}

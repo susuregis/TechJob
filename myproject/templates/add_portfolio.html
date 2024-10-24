@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'add_portfolio.css' %}">
+    <title>Adicionar Portfólio</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <h1>Adicionar Portfólio</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="title">Título:</label>
+        <input type="text" id="title" name="title" required placeholder="Digite o título do portfólio">
+        
+        <label for="description">Descrição:</label>
+        <textarea id="description" name="description" required placeholder="Digite a descrição do portfólio"></textarea>
+        
+        <button type="submit">Salvar Portfólio</button>
+    </form>
+    <div class="btn-container">
+        <button class="btn">
+            <a class="link" href="{% url 'portfolio' %}">Voltar ao Portfólio</a>
+        </button>
+    </div>
+</body>
+</html>

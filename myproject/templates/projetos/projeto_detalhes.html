@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ projeto.titulo }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'projeto_detalhes.css' %}">
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="projeto-container">
+        <h1 class="projeto-titulo">{{ projeto.titulo }}</h1>
+        <p class="projeto-descricao">{{ projeto.descricao }}</p>
+        <div class="projeto-criador">
+            <span class="text-gray-400">Criado por:</span>
+            <span class="font-semibold text-white">{{ projeto.usuario.username }}</span>
+        </div>
+    </div>
+</body>
+</html>

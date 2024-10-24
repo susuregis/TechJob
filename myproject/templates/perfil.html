@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'perfil.css' %}">
+    <title>Perfil</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="prfl-container">
+        <div class="prfl-tlt">
+            <div class="prfl-pic">
+                {% if user.profile_picture %}
+                    <img src="{{ user.profile_picture.url }}" alt="Foto de perfil" />
+                {% else %}
+                    <img src="{% static 'default_profile.png' %}" alt="Foto de perfil padrão" />
+                {% endif %}
+            </div>            
+            <div class="prfl-info">
+                <h2>{{ user.username }}</h2>
+                <p>{{ user.description }}</p>
+                <div class="prfl-btn">
+                    <a href="{% url 'edit_profile' %}" class="btn">Editar Perfil</a>
+                    <a href="{% url 'edit_skills' %}" class="btn">Editar Skills</a>
+                    <a href="{% url 'portfolio' %}" class="btn">Portfolio</a>
+                    <a href="{% url 'send_message' %}?recipient_id={{ user.id }}" class="btn">Mensagem</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="prfl-skills">
+            <h3>Skills</h3>
+            <div class="skills-list">
+                {% for skill in user.skills.all %}
+                    <div class="skill-item">{{ skill.name }}</div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

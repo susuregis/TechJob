@@ -1,0 +1,67 @@
+body {
+    background-color: rgb(31, 41, 55);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    margin: 0;
+}
+  
+.lgn-container {
+    background-color: rgb(15, 23, 42);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    color: #f8f8f8;
+}
+  
+.lgn-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #f8f8f8;
+}
+  
+.lgn-form {
+    display: flex;
+    flex-direction: column;
+}
+  
+.lgn-form label {
+    margin-bottom: 5px;
+}
+  
+.lgn-form input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 7px;
+    background-color: rgb(55, 65, 81);
+    color: #f8f8f8;
+    font-size: 16px;
+}
+  
+.lgn-form input::placeholder {
+    color: rgba(248, 248, 248, 0.7);
+}
+  
+.lgn-btn {
+    padding: 10px;
+    background-color: rgb(66, 180, 75);
+    border: none;
+    border-radius: 7px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.12s, opacity 0.12s;
+}
+  
+.lgn-btn:hover {
+    background-color: rgb(55, 155, 65);
+}
+  
+.lgn-btn:active {
+    opacity: 0.6;
+}

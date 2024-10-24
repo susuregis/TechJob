@@ -1,0 +1,13 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+    <title>Home</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <h2>Welcome to the Home Page</h2>
+    <p><a href="{% url 'register' %}">Register</a> | <a href="{% url 'login_view' %}">Login</a></p> <!-- Certifique-se de que o nome aqui está correto -->
+</body>
+</html>
