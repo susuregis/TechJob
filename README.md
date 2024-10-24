@@ -59,5 +59,4 @@ Para executar este projeto, você precisará das seguintes ferramentas e versõe
 - [Caio Augusto](https://github.com/CaioAugustoMachadoDeMelo) - camm@cesar.school
 - [Davi Santiago](https://github.com/Davicas01) - dscpr@cesar.school
 - [Felipe Gonçalves Moxotó](https://github.com/Moxoto2k) - fgm@cesar.school
-- [Gustavo Marcone](https://github.com/Gustaguiar02) - gmal@cesar.school
 - [Kaike Campos](https://github.com/Kaik-e) - kcma@cesar.school
